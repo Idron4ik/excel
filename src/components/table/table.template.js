@@ -29,7 +29,7 @@ export function createTable (rowsCount = 15) {
   const codsCount = CODES.Z - CODES.A + 1;
   const rows = [];
   const cols = new Array(codsCount).fill('').map((_, index) => toColumn(toChar( CODES.A + index))).join('');
-  const cells = new Array(rowsCount).fill('').map((_, index) => toCell('')).join('');
+  const cells = new Array(rowsCount).fill('').map(() => toCell('')).join('');
   rows.push(toRow(null, cols));
 
   for (let i = 0; i < rowsCount; i++) {
