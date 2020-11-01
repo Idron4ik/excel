@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lintfix": "eslint --fix --ext .js,.jsx .",
     "dev": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
@@ -26,6 +27,7 @@
   "browserslist": "> 0.25%, not dead",
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "babel-eslint": "^10.1.0",
